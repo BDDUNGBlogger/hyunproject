@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+/* 노멀라이즈 시작 */
+body, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none; /* 해당 태그의 list-style을 none으로 설정하여 점 제거 */
+}
+
+a {
+	color: inherit; /* 부모 엘리먼트의 색상을 상속받음 */
+	text-decoration: none; /* 밑줄 제거 */
+}
+/* 노멀라이즈 끝 */
+
+/* 커스텀 시작 */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+}
+
+.side-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 270px;
+	height: 100%;
+	background-color: #333;
+	color: white;
+	padding-top: 20px;
+	transition: .5s;
+}
+
+.side-bar:hover {
+	width: 320px; /* 사이드바가 확장될 때 너비 */
+}
+
+.side-bar__icon-box {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+}
+
+.side-bar__icon-1 {
+	position: relative;
+	width: 23px;
+	height: 17px;
+	transition: .5s;
+}
+
+.side-bar__icon-1>div {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: white;
+	transition: all .5s;
+}
+
+.side-bar__icon-1>div:nth-of-type(1) {
+	top: 0;
+}
+
+.side-bar__icon-1>div:nth-of-type(2) {
+	top: 7px;
+}
+
+.side-bar__icon-1>div:nth-of-type(3) {
+	top: 14px;
+}
+
+.side-bar:hover .side-bar__icon-1 {
+	transform: translate(-30px, 0);
+}
+
+.side-bar:hover .side-bar__icon-1>div:nth-of-type(2) {
+	transform: rotate(45deg);
+	top: 7px;
+}
+
+.side-bar:hover .side-bar__icon-1>div:nth-of-type(3) {
+	transform: rotate(-45deg);
+	top: 7px;
+}
+
+.side-bar ul {
+	padding: 20px 0;
+}
+
+.side-bar ul li {
+	position: relative;
+}
+
+.side-bar ul li a {
+	display: block;
+	color: white;
+	padding: 15px 20px;
+	font-size: 1.2rem;
+	transition: .3s;
+}
+
+.side-bar ul li a:hover {
+	background-color: #555;
+	border-bottom: 1px solid #999;
+}
+
+.side-bar__image {
+	width: 100%; /* 이미지 너비를 사이드바 너비에 맞춤 */
+	height: auto; /* 이미지 비율을 유지 */
+	margin-top: 20px; /* 이미지와 콘텐츠 간의 여백 */
+}
+
+.my-page-content {
+	margin-left: 300px; /* 사이드바 너비와 동일 */
+	padding: 20px;
+	display: flex; /* Flexbox 사용 */
+	justify-content: center; /* 가로 방향 가운데 정렬 */
+	align-items: center; /* 세로 방향 가운데 정렬 */
+	height: 100vh; /* 화면 높이를 꽉 채움 */
+}
+
+.profile-orders-container {
+	display: flex;
+	justify-content: space-between; /* 좌우로 간격을 벌림 */
+	align-items: flex-start; /* 세로 방향으로 정렬 */
+	width: 100%;
+	max-width: 1200px; /* 최대 너비를 설정 */
+}
+
+.profile-section, .orders-section {
+	width: 35%; /* 섹션의 너비를 48%로 설정 */
+	background-color: white; /* 배경색을 흰색으로 설정 */
+	border-radius: 30px; /* 모서리를 둥글게 설정 */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 섀도우 효과 */
+	margin-bottom: 20px; /* 섹션 간의 간격 */
+	padding: 20px; /* 내부 여백 */
+	align-items: center; /* 가로 방향 가운데 정렬 */
+	text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.profile-section {
+	margin-right: 10px; /* "내 정보" 섹션 오른쪽 간격 */
+}
+
+.orders-section {
+	margin-left: 10px; /* "최근 주문" 섹션 왼쪽 간격 */
+}
+
+.profile-section h2, .orders-section h2 {
+	font-size: 1.5rem; /* 제목 글씨 크기 */
+	color: #333; /* 제목 색상 */
+}
+
+.profile-section p, .orders-section p {
+	font-size: 1rem; /* 내용 글씨 크기 */
+	color: #666; /* 내용 색상 */
+}
+
+.edit-profile-btn, .view-all-btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 15px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: .3s;
+}
+
+.edit-profile-btn:hover, .view-all-btn:hover {
+	background-color: #555;
+}
+
+/* 내 정보 섹션 이미지 크기 조정 */
+.profile-section .side-bar__image {
+    width: 80px; /* 이미지 너비를 원하는 크기로 설정 */
+    height: auto; /* 이미지 비율 유지 */
+    margin-bottom: 20px; /* 이미지 아래 여백 설정 */
+}
+
+/* 최근 주문 섹션 이미지 크기 조정 */
+.orders-section .side-bar__image {
+    width: 80px; /* 이미지 너비를 원하는 크기로 설정 */
+    height: auto; /* 이미지 비율 유지 */
+    margin-bottom: 20px; /* 이미지 아래 여백 설정 */
+}
+
+.profile-section h2, .orders-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-section p, .orders-section p {
+    font-size: 1rem;
+    color: #666;
+}

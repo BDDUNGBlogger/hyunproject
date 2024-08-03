@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* 공통 스타일 */
+button {
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    padding: 5px 15px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none; /* 기본 box-shadow 제거 */
+    border: none; /* 기본 테두리 제거 */
+}
+
+/* 버튼 포커스 및 활성 상태 스타일 */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus:active,
+.btn-primary:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:focus:active,
+.btn-danger:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info:focus:active,
+.btn-info:hover {
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none !important; /* 기본 box-shadow 제거 */
+    border: none !important; /* 테두리 제거 */
+}
+
+/* 조회와 후원 취소 버튼 스타일 */
+.btn-primary, .btn-danger {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    border: none; /* 테두리 제거 */
+}
+
+.btn-primary:hover, .btn-danger:hover {
+    background-color: #333333;
+}
+
+/* 자세히 보기 버튼 스타일 */
+.btn-info {
+    background-color: lightgray;
+    color: #5D5D5D;
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    border: none; /* 테두리 제거 */
+}
+
+.btn-info:hover {
+    background-color: #BDBDBD;
+    color: white;
+}
+
+/* 추가적인 레이아웃 및 텍스트 스타일 */
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center; /* 중앙 정렬 */
+    font-weight: bold;
+}
+
+h5 {
+	margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center; /* 중앙 정렬 */
+    font-weight: bold;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* 조회 버튼 오른쪽 정렬 */
+}
+
+.support-history {
+    margin-top: 20px;
+}
+
+.support-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd; /* 경계선 추가 */
+    border-radius: 10px;
+    background-color: #f9f9f9; /* 배경 색상 추가 */
+}
+
+.support-entry dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.support-entry dt {
+    flex: 1 1 150px;
+    font-weight: bold;
+}
+
+.support-entry dd {
+    flex: 1 1 calc(100% - 150px);
+    margin: 0 0 10px 0;
+    padding: 0 0 0 10px;
+    border-left: 2px solid #ddd; /* 값 부분에 왼쪽 테두리 추가 */
+}
+
+.support-entry .btn-group {
+    display: flex;
+    justify-content: flex-end; /* 버튼 오른쪽 정렬 */
+}

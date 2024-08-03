@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* 공통 스타일 */
+button {
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    padding: 5px 15px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none; /* 기본 box-shadow 제거 */
+    border: none; /* 기본 테두리 제거 */
+}
+
+/* 버튼 포커스 및 활성 상태 스타일 */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus:active,
+.btn-primary:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:focus:active,
+.btn-danger:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info:focus:active,
+.btn-info:hover {
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none !important; /* 기본 box-shadow 제거 */
+    border: none !important; /* 테두리 제거 */
+}
+
+/* 조회와 후원 취소 버튼 스타일 */
+.btn-primary, .btn-danger {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    border: none; /* 테두리 제거 */
+}
+
+.btn-primary:hover, .btn-danger:hover {
+    background-color: #333333;
+}
+
+/* 자세히 보기 버튼 스타일 */
+.btn-info {
+    background-color: lightgray;
+    color: #5D5D5D;
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+    border: none; /* 테두리 제거 */
+}
+
+.btn-info:hover {
+    background-color: #BDBDBD;
+    color: white;
+}
+
+/* 추가적인 레이아웃 및 텍스트 스타일 */
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center; /* 중앙 정렬 */
+    font-weight: bold;
+}
+
+h5 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center; /* 중앙 정렬 */
+    font-weight: bold;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* 조회 버튼 오른쪽 정렬 */
+}
+
+.support-history {
+    margin-top: 20px;
+}
+
+.support-entry,
+.item-details {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd; /* 경계선 추가 */
+    border-radius: 10px;
+    background-color: #f9f9f9; /* 배경 색상 추가 */
+}
+
+.support-entry dl,
+.item-details dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.support-entry dt,
+.item-details dt {
+    flex: 1 1 150px;
+    font-weight: bold;
+}
+
+.support-entry dd,
+.item-details dd {
+    flex: 1 1 calc(100% - 150px);
+    margin: 0 0 10px 0;
+    padding: 0 0 0 10px;
+    border-left: 2px solid #ddd; /* 값 부분에 왼쪽 테두리 추가 */
+}
+
+.support-entry .btn-group {
+    display: flex;
+    justify-content: flex-end; /* 버튼 오른쪽 정렬 */
+}
+
+/* 컨테이너 스타일 */
+.cancel-container {
+	margin-top: 120px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* 제목 스타일 */
+.cancel-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* 아이템 정보 스타일 */
+.item-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 사유 선택 스타일 */
+.reason-select {
+    margin-bottom: 20px;
+}
+
+.reason-select label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.reason-select select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+   
+}
+.select-container {
+    display: inline-block;
+    position: relative;
+}
+
+.select-container select {
+    width: auto;
+    min-width: 100px; /* 최소 너비 설정 */
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    appearance: none; /* 기본 브라우저 스타일 제거 */
+}
+
+.select-container::after {
+    content: '\25BC'; /* 아래쪽 화살표 */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 선택 불가 */
+    font-size: 16px;
+    color: #333;
+}
+
+/* 상세 사유 입력 스타일 */
+.detail-reason {
+    margin-bottom: 20px;
+}
+
+.detail-reason label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.detail-reason textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+.detail-reason .char-counter {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 경고 스타일 */
+.warning {
+    margin-bottom: 20px;
+    background-color: #ffecec;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 10px;
+    color: #721c24;
+    font-size: 14px;
+}
+
+/* 취소 버튼 스타일 */
+.cancel-button {
+    display: block;
+    width: 100%;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+}

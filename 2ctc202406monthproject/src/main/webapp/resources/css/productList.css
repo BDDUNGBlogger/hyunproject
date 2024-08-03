@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+.prolist-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.prolist-title-container h1 {
+    font-size: 3.5em;
+  	font-weight: bold;
+    color: black;
+    text-align: center;
+     margin-bottom: 0.5em; /* hr와의 간격 조절 */
+}
+
+.prolist-title-container hr {
+    background: black;
+    width: 80%;
+    height: 2px;
+    margin: 0; /* hr의 기본 마진 제거 */
+}
+
+.prolist-container {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    flex-wrap: wrap; /* 여러 줄로 나열 가능 */
+}
+
+.prolist-box {
+    display: flex;
+    justify-content: space-between; /* 아이템 간격 균등 분배 */
+    flex-wrap: wrap; /* 여러 줄로 나열 가능 */
+    width: 100%; /* 전체 너비 */
+    max-width: 1200px; /* 최대 너비 설정 */
+}
+
+.prolist-item {
+	width: clac(25% - 20px);
+    flex: 0 1 30%; /* 아이템 너비 설정, 세 개 아이템이 가로로 나란히 배치되도록 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 박스 그림자 추가 */
+    border-radius: 10px; /* 박스 모서리 둥글게 */
+    overflow: hidden; /* 내용이 넘칠 경우 잘리도록 설정 */
+    position: relative;
+    
+}
+
+.prolist-img{
+	position: relative;
+}
+
+.prolist-image img {
+    width: 100%; 
+    height: auto;
+    border: none;
+    outline: none;
+    
+}
+
+.prolist-cart-icon {
+    position: absolute;
+    bottom: 35%; /* 이미지 하단에서 절반 위치 */
+    left: 50%; /* 이미지 좌측에서 절반 위치 */
+    transform: translate(-50%, 50%); /* 이미지를 수평 및 수직으로 이동하여 가운데 정렬 */
+    display: none; /* 처음에는 숨김 */
+    border-radius: 50%; /* 원 모양으로 만듦 */
+    overflow: hidden; /* 이미지를 원 안에 맞추기 위해 추가 */
+    width: 40px; /* 이미지 크기 지정 */
+    height: 40px;
+    background-color: white;
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    line-height: 40px; /* 텍스트의 세로 가운데 정렬 */
+    
+}
+
+.prolist-image:hover .cart-icon {
+    display: block; /* 마우스를 올리면 보이도록 */
+}
+
+.prolist-content img {
+    width: 25px;
+    height: 25px;
+}
+
+.prolist-content {
+    text-align: center; 
+    padding: 20px; /* 내용 여백 */
+}
+
+.prolist-content h3 {
+    margin: 10px 0; /* 제목 위아래 여백 */
+    font-size: 1.2em; /* 제목 크기 */
+    color: black;
+    text-decoration: none;
+}
+
+.prolist-content:hover {
+    text-decoration: none
+}
+
+.prolist-content p {
+	font-size: 14pt;
+    margin: 5px 0; /* 문단 여백 */
+    color: #333; /* 문단 색상 */
+}
+
+.prolist-content p2{
+	font-size: 10pt;
+}
+
+
+
+.prolist-page-count {
+	display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    
+}
+
+.prolist-page-count button {
+	background-color: white;  
+    border: none; /* 테두리 제거 */
+    outline: none; /* 클릭 시 포커스 테두리 제거 */
+}
+
+.prolist-page-count button:hover {
+    color: lightgreen;
+}
+
+
+

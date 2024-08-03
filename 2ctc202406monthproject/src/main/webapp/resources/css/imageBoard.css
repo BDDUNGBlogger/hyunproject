@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.total {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.wrapper {
+	display: inline-block;
+	margin: 0 9px;
+	vertical-align: top;
+	position: relative; /* 상대적 위치 지정 */
+}
+
+.wrapper img {
+	width: 360px;
+	height: 550px;
+	object-fit: cover; /* 이미지가 부모 요소에 맞게 조절됨 */
+	z-index: 0; /* 이미지의 z-index 설정 이 값에 따라 어떤게상위에 올지 안올지 결정*/
+	opacity: 0.8;
+}
+
+.wrapper h2 {
+	position: absolute; /* 절대적 위치 지정 */
+	top: 50%; /* 부모 요소의 50% 지점으로부터 위로 이동 */
+	left: 50%; /* 부모 요소의 50% 지점으로부터 오른쪽으로 이동 */
+	transform: translate(-50%, -50%); /* 텍스트를 수평 및 수직으로 가운데 정렬 */
+	margin: 0; /* 기본 마진 제거 */
+	color: white;
+	z-index: 1; /* h2 요소의 z-index를 높게 설정 */
+	text-shadow: -1px -1px 0 #A0A0A0, 
+				1px -1px 0 #A0A0A0, 
+				-1px 1px 0 #A0A0A0, 
+				1px 1px 0 #A0A0A0; /* 짙은 회색 테두리 효과 */
+}

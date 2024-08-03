@@ -1,0 +1,92 @@
+/* footer */
+.footer-site-footer {
+	font-size: 15px;
+	color: #737373;
+}
+
+.footer-site-footer h2 {
+	color: #737373
+}
+
+.footer-site-footer h6 {
+	color: #737373;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-top: 5px;
+	letter-spacing: 2px;
+}
+
+.footer-site-footer a {
+	color: #737373;
+}
+
+.footer-site-footer a:hover {
+	color: red ;
+	text-decoration: underline;
+}
+
+.footer-navbar-weather {
+	padding-left: 0;
+	list-style: none
+}
+
+.footer-navbar-weather li {
+	display: block
+}
+
+.footer-navbar-weather a {
+	color: #737373
+}
+
+.footer-navbar-weather a:active, .footer-navbar-weather a:focus,
+	.footer-navbar-weather a:hover {
+	text-decoration: none;
+}
+
+.footer-navbar-weather.inline li {
+	display: inline-block
+}
+
+.footer-navbar-news {
+	padding-left: 0;
+	list-style: none
+}
+
+.footer-navbar-news li {
+	display: block
+}
+
+.footer-navbar-news a {
+	color: #737373
+}
+
+.footer-navbar-news a:active, .footer-navbar-news a:focus,
+	.footer-navbar-news a:hover {
+	text-decoration: none;
+}
+
+.footer-navbar-news.inline li {
+	display: inline-block
+}
+
+.footer-navbar-campaign {
+	padding-left: 0;
+	list-style: none
+}
+
+.footer-navbar-campaign li {
+	display: block
+}
+
+.footer-navbar-campaign a {
+	color: #737373
+}
+
+.footer-navbar-campaign a:active, .footer-navbar-campaign a:focus,
+	.footer-navbar-campaign a:hover {
+	text-decoration: none;
+}
+
+.footer-navbar-campaign.inline li {
+	display: inline-block
+}

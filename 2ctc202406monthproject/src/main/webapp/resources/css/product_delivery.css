@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+.container {
+	margin-top: 100px;
+	text-align: center;
+}
+
+/* 배송조회 */
+.title {
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+/* 배송대기 */
+.delivery-status1 {
+	text-align: center;
+	margin-bottom: 20px;
+	border: 4px solid;
+	border-color: lightgreen;
+	border-radius: 5px;
+}
+
+.delivery-status1 img {
+	max-width: 100%; /* 이미지가 컨테이너 너비를 넘지 않도록 설정 */
+	height: auto; /* 가로세로 비율 유지 */
+}
+
+.delivery-status1 h3 {
+	margin-bottom: 10px;
+}
+
+.delivery-status1 p {
+	color: #666;
+}
+
+/* 배송중 */
+.delivery-status2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.delivery-status2 img {
+	max-width: 100%; /* 이미지가 컨테이너 너비를 넘지 않도록 설정 */
+	height: auto; /* 가로세로 비율 유지 */
+}
+
+.delivery-status2 h3 {
+	margin-bottom: 10px;
+}
+
+.delivery-status2 p {
+	margin-top: 13px;
+	color: #666;
+}
+
+/* 배송완료 */
+.delivery-status3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.delivery-status3 img {
+	max-width: 85%; /* 이미지가 컨테이너 너비를 넘지 않도록 설정 */
+	height: auto; /* 가로세로 비율 유지 */
+}
+
+.delivery-status3 h3 {
+	margin-bottom: 10px;
+}
+
+.delivery-status3 p {
+	margin-top: 6px;
+	color: #666;
+}
+
+.delivery-bottom{
+	margin-top: 30px;
+}

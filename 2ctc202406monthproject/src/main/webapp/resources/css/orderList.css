@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+.container{
+	margin-top: 100px;
+	text-align: center; 
+}
+
+/* 구매내역 */
+.title{
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+/* 검색바,검색버튼 */
+.order-serch{
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+}
+
+.order-serch .form-control {
+    flex: 1;
+}
+
+/* 검색바 */
+.form-control:focus{
+	box-shadow: none;
+	border-color: black;
+}
+
+/* 구매내역 박스 */
+.order-info {
+    margin: 20px auto; /* 가운데 정렬을 위해 좌우 마진을 auto로 변경 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+ 
+/* date 주문 */
+.order-date {
+    text-align: left;
+}
+
+/* 주문 상세보기 */
+.order-showdetail{
+	color: black;
+}
+
+.order-showdetail:hover{
+	color: black;
+	text-decoration: none;
+}
+
+/* 이미지, 상품정보 컨테이너 */
+.order-details {
+	margin-top: 20px;
+    display: flex;
+    gap: 40px; /* 이미지와 정보 사이의 간격 추가 */
+}
+
+/* 이미지 */
+.order-img img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* 상품정보 */
+.order-infodetail p {
+    text-align: left;
+}
+
+/* 조회, 취소, 신청 버튼 컨테이너 */
+.order-btns {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.order-btns .btn {
+        width: 30%; /* 버튼의 너비를 동일하게 설정 */
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-left: 10px;
+}
+
+/* 새로운 CSS 추가 */
+.order-showdetail {
+    top: 20%;
+    right: 30%;
+    cursor: pointer;
+}
+
+/* 배송상태, 주문상세보기 */
+.order-state {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+

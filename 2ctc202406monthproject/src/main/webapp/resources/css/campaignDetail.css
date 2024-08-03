@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.img-fluid {
+    width: 100%; 
+    height: auto;
+}
+
+.donation-info {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-info h5 {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.donation-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.amount {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.remaining-days {
+    font-size: 16px;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.participation-info {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: black;
+    border-color: black;
+    color: white;
+    font-size: 18px;
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none; /* 기본 box-shadow 제거 */
+    border-radius: 10px; /* 버튼을 라운드 스퀘어 박스로 만듦 */
+}
+
+.btn-primary:hover {
+    background-color: #adb5bd;
+    border-color: #adb5bd;  
+    color: black;
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none; /* 기본 box-shadow 제거 */
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus:active,
+.btn-primary:hover {
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: none !important; /* 기본 box-shadow 제거 */
+    background-color: #adb5bd !important; /* 호버 색상 유지 */
+    color: black !important; /* 호버 텍스트 색상 유지 */
+    border-color: #adb5bd;  
+}
+
+.donation-btn.active {
+    background-color: #adb5bd;
+    color: white;
+}
+
+.social-info {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* .nav-link와 a 태그의 색상을 #adb5bd로 변경 */
+.nav-link, a {
+    color: #adb5bd;
+}
+
+/* 링크에 호버 효과 추가 */
+.nav-link:hover, a:hover {
+    color: #adb5bd;
+    text-decoration: none; /* 호버 시 밑줄 제거 */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+}
+
+.donation-summary {
+    display: flex;
+    align-items: center;
+}
+
+.donation-summary img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.donation-details {
+    flex: 1;
+}
+
+.modal-body h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    font-size: 14px;
+}
+
+.form-text {
+    font-size: 12px;
+}
+
+.btn-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 10px); /* 모달 창의 가로 크기에서 10px을 뺀 너비 */
+    margin-bottom: 10px;
+}
+
+.btn-group .btn {
+    flex: 1;
+    margin: 0 5px; /* 양쪽 여유 */
+}
+
+/* 추가된 부분 */
+.fixed-size-image {
+    width: 730px;
+    height: auto;
+    object-fit: cover; /* 이미지가 고정된 크기에 맞게 조절되도록 설정 */
+}
+
+.btn-selected {
+    background-color: #007bff;
+    color: white;
+}

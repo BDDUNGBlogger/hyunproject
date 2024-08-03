@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* 전체 컨테이너 */
+.container h3{
+	margin-top:30px;
+	text-align: center;
+	font-weight: bold;
+} 
+
+.modify-container{
+	margin-top: 10% 
+}
+
+/* 주소검색 버튼 */
+.addr-btn:focus{
+	outline: none;
+}
+
+/* 우편번호 */
+.form-group1{
+	margin-top: 40px;
+}
+
+/* 주소 */
+.form-group2{
+	margin-top: 15px;
+}
+
+/* 상세 주소 */
+.form-group3{
+	margin-top: 15px;
+}
+
+/* 수령인 */
+.form-group4{
+	margin-top: 15px;
+}
+
+/* 전화번호 */
+.form-group5{
+	margin-top: 15px;
+}
+
+
+/* 주소검색 버튼 */
+.addr-btn{
+	margin-left: 10px;
+	border: none;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: bold;
+	width: 20%;
+}
+
+/* 우편번호 라벨 */
+.sample6_postcode{
+	font-weight: bold;
+}
+
+/* 주소 라벨 */
+.sample6_address{
+	font-weight: bold;
+}
+
+/* 상세주소 라벨 */
+.sample6_detailAddress{
+	font-weight: bold;
+}
+
+/* 수령인 라벨 */
+.receiver{
+	font-weight: bold;
+}
+
+/* 전화번호 라벨 */ 
+.phone{
+	font-weight: bold;
+}
+
+/* 텍스트 부분 */ 
+.form-control{
+	border-color: black;
+	border-width: 1px;
+}
+
+/* 저장버튼 컨테이너 */
+.modify-save{
+	text-align: center;
+	margin-top: 40px;
+}
+
+/* 저장버튼 */
+.modify-save-btn{ 
+	border: none;
+	outline: none;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size:1.2em;
+	width: 100px;
+	height: 40px;
+}
+
+.modify-save-btn:focus{
+	border: none;
+	outline: none;
+}
+

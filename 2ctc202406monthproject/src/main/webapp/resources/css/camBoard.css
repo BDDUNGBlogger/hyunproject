@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.container-campaign {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    margin-top: 80px;
+}
+
+.box-campaign {
+   width: 80%;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: nowrap; /* 한 줄에 나열 */
+}
+
+.item-campaign {
+    width: 450px;
+    margin-right: 20px; /* 각 아이템 간격 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 박스 그림자 추가 */
+    border-radius: 10px; /* 박스 모서리 둥글게 */
+    overflow: hidden; /* 내용이 넘칠 경우 잘리도록 설정 */
+    position: relative;
+}
+
+.image-campaign img {
+    width: 100%; /* 이미지 너비 */
+    height: 250px;
+    margin-bottom: 10px; /* 이미지와 내용 사이 여백 */
+    transition: transform 0.3s; /* 이미지 확대 애니메이션 */
+   position: relative;
+   cursor: pointer;
+}
+
+.image-campaign img:hover {
+    transform: scale(1.05); /* 이미지 확대 */
+}
+
+.content-campaign {
+   margin-bottom: 20px;
+    text-align: center; /* 내용 가운데 정렬 */
+}
+
+.content h2 {
+    margin-top: 0; /* 제목 위 여백 제거 */
+}
+
+.content p {
+    margin-bottom: 10px; /* 문단 아래 여백 */
+}
+
+a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상을 부모 요소의 색상으로 */
+    transition: color 0.3s; /* 색상 변경 애니메이션 */
+}
+
+a:hover {
+    text-decoration: none; /* 링크에 마우스 올렸을 때 밑줄 제거 */
+}
+
+a:hover h2 {
+    color: orange; /* 제목 주황색으로 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.btn-campaign {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    font-weight: bold; /* 폰트 두껍게 */
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s; /* 배경색 및 글자색 변경 애니메이션 */
+}
+
+.btn-campaign:hover {
+    background-color: orange; /* 버튼 주황색으로 변경 */
+    color: black; /* 버튼 글자색 검정으로 변경 */
+}

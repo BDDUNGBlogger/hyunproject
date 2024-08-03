@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+ 
+body, html {
+	height: 100%;
+	margin: 0;
+	background: url('https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/bg.svg') no-repeat left top fixed;
+	background-size: cover;
+}
+
+.container-fluid {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	
+}
+
+.footer-site-footer img {
+    width: 100px; /* 원하는 너비로 설정 */
+    height: auto; /* 높이 자동 조정 */
+    margin-bottom: 10px; /* 아래 여백 추가 */
+}
+
+.card {
+	border-radius: 15px;
+}
+
+.card-body {
+	padding: 30px;
+}
+
+.form-group label {
+	font-weight: bold;
+}
+
+.form-control {
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	box-shadow: none;
+	outline: none;
+}
+
+.form-control:focus {
+	border-color: #80bdff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, .25);
+}
+
+.form-check-label {
+	margin-left: 10px;
+}
+
+.input-group-append .btn-primary {
+	background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
+	border: none;
+}
+
+.input-group-append .btn-primary:hover {
+	background-position: left;
+}
+
+.btn-primary {
+	background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
+	border: none;
+	transition: background-position 0.4s;
+}
+
+.btn-primary:hover {
+	background-position: left;
+}
+
+form:errors {
+	color: red;
+}
+
+select {
+	margin-top: 10px;
+	padding: 5px;
+	border-radius: .25rem;
+	border: 1px solid #ced4da;
+}
+
+.text-right .btn-primary {
+	width: 100%;
+}
