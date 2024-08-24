@@ -39,8 +39,8 @@ import kr.co.soldesk.mapper.UserMapper;
 import kr.co.soldesk.mapper.WeatherMapper;
 import kr.co.soldesk.service.TopMenuService;
 
-@Configuration // Spring MVC ï¿½ë´½æ¿¡ì’–ì ¥ï¿½ë“ƒ ï¿½ê½•ï¿½ì ™
-@EnableWebMvc // ï¿½ë¼±ï¿½ë‚ï¿½ë€’ï¿½ì” ï¿½ë€¡ ï¿½ë€‘ï¿½ë˜¿ ï¿½ê½‘ï¿½ë¼µ
+@Configuration //Spring MVC ÇÁ·ÎÁ§Æ® ¼³Á¤
+@EnableWebMvc //¾î³ëÅ×ÀÌ¼Ç ¼ÂÆÃ ¼±¾ğ
 @ComponentScan("kr.co.soldesk.dao")
 @ComponentScan("kr.co.soldesk.service")
 @ComponentScan("kr.co.soldesk.controller")
@@ -50,7 +50,8 @@ import kr.co.soldesk.service.TopMenuService;
 public class ServletAppContext implements WebMvcConfigurer {
 
 	
-  @Value("${db.classname}")
+  @Value("${db.cla"
+  		+ "ssname}")
    private String db_classname;
 
    @Value("${db.url}")
@@ -75,14 +76,14 @@ public class ServletAppContext implements WebMvcConfigurer {
       registry.jsp("/WEB-INF/views/", ".jsp");
    }
 
-   // ï¿½ì ™ï¿½ìŸ» è€Œâ‘¦ë€—ï§¥ï¿½ ï¿½ë™†ï¿½ì”ªï¿½ì“½ å¯ƒìˆì¤ˆ ï¿½ê½•ï¿½ì ™
+	//Á¤Àû ÄÁÅÙÃ÷ ÆÄÀÏÀÇ °æ·Î ¼³Á¤
    @Override
    public void addResourceHandlers(ResourceHandlerRegistry registry) {
       WebMvcConfigurer.super.addResourceHandlers(registry);
       registry.addResourceHandler("/**").addResourceLocations("/resources/");
    }
 
-   // ï¿½ëœ²ï¿½ì” ï¿½ê½£è¸°ì¢ì” ï¿½ë’ª ï¿½ì ’ï¿½ëƒ½ ï¿½ì ™è¹‚ëŒ€ï¿½ï¿½ æ„¿ï¿½ç”±Ñ‹ë¸¯ï¿½ë’— Bean
+	// µ¥ÀÌÅÍº£ÀÌ½º Á¢¼Ó Á¤º¸¸¦ °ü¸®ÇÏ´Â Bean
    @Bean
    public BasicDataSource dataSource() {
       BasicDataSource source = new BasicDataSource();
@@ -94,15 +95,14 @@ public class ServletAppContext implements WebMvcConfigurer {
       return source;
    }
 
-   // è‘ì‡°â”è‡¾ë©¸ë‚µ ï¿½ì ’ï¿½ëƒ½ ï¿½ì ™è¹‚ëŒ€ï¿½ï¿½ æ„¿ï¿½ç”±Ñ‹ë¸¯ï¿½ë’— åª›ì•¹ê»œ
+	// Äõ¸®¹®°ú Á¢¼Ó Á¤º¸¸¦ °ü¸®ÇÏ´Â °´Ã¼
    @Bean
    public SqlSessionFactory factory(BasicDataSource source) throws Exception {
       SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
       factoryBean.setDataSource(source);
       
-      // MyBatis ï¿½ê½•ï¿½ì ™ ç•°ë¶½ï¿½
       org.apache.ibatis.session.Configuration mybatisConfig = new org.apache.ibatis.session.Configuration();
-      mybatisConfig.setJdbcTypeForNull(JdbcType.VARCHAR); // ï¿½ì”  ï¿½ê½•ï¿½ì ™ï¿½ì“£ ç•°ë¶½ï¿½
+      mybatisConfig.setJdbcTypeForNull(JdbcType.VARCHAR);
       factoryBean.setConfiguration(mybatisConfig);
       
       SqlSessionFactory factory = factoryBean.getObject();
@@ -110,7 +110,7 @@ public class ServletAppContext implements WebMvcConfigurer {
       return factory;
    }
 
-   // è‘ì‡°â”è‡¾ï¿½ ï¿½ë–ï¿½ë»¾ï¿½ì“£ ï¿½ìï¿½ë¸³ åª›ì•¹ê»œ(Mapper æ„¿ï¿½ç”±ï¿½)
+	// Äõ¸®¹® ½ÇÇàÀ» À§ÇÑ °´Ã¼(Mapper °ü¸®)
    @Bean
    public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception {
       MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
@@ -188,8 +188,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 
       TopMenuInterceptor topMenuInterceptor = new TopMenuInterceptor(topMenuService, loginUserBean);
       InterceptorRegistration reg1 = registry.addInterceptor(topMenuInterceptor);
-      reg1.addPathPatterns("/**");// ï§â‘¤ë±º ï¿½ìŠ‚ï§£ï¿½äºŒì‡±ëƒ¼ï¿½ë¿‰ ï¿½ë£ï¿½ì˜‰
-      System.out.println("äºŒì‡±ëƒ¼ï¿½ìŠ‚ï§£ï¿½");
+      reg1.addPathPatterns("/**");//¸ğµç ¿äÃ»ÁÖ¼Ò¿¡ µ¿ÀÛ
 
       CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserBean);
       InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
@@ -205,18 +204,17 @@ public class ServletAppContext implements WebMvcConfigurer {
       
    }
 
-   // Propertiesï¿½ë™†ï¿½ì”ªï¿½ì“£ Beanï¿½ì‘æ¿¡ï¿½ ï¿½ë²‘æ¿¡ï¿½
+	//PropertiesÆÄÀÏÀ» BeanÀ¸·Î µî·Ï
    @Bean
    public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
       return new PropertySourcesPlaceholderConfigurer();
    }
 
-   // Properties Messageï¿½ìç§»ï¿½ ï§ï¿½ï¿½ì ™ï¿½ë¸¯ï¿½ë¿¬ ï¿½ì‘€ï¿½ìŠšï¿½ê½¦ å¯ƒï¿½ï¿½ê¶— ï¿½ëƒ¼ï¿½ë’ªï¿½ë’— ï§â‘¤ëª¢ ï¿½ì” æ€¨ë…¹ì“£ ï¿½ì”«æ€¨ï¿½ åª›ï¿½ï¿½ë£„æ¿¡ï¿½
+	//Properties MessageÀ§Ä¡ ÁöÁ¤ÇÏ¿© À¯È¿¼º °Ë»ç ¼Ò½º´Â ¸ğµÎ ÀÌ°÷À» ÀĞ°í °¡µµ·Ï
    @Bean
    public ReloadableResourceBundleMessageSource messageSource() {
       ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
       res.setBasenames("/WEB-INF/properties/error_message");
-      System.out.println("ï¿½ë¿‰ï¿½ìœ­ï§ë¶¿ê½­ï§ï¿½");
       return res;
    }
 
@@ -227,10 +225,10 @@ public class ServletAppContext implements WebMvcConfigurer {
       return factoryBean;
    }
 
-   // enctype="multipart/form-data" ï¿½ê¶—ï¿½ìŠœï¿½ë¸¯æ¹²ï¿½ ï¿½ìï¿½ë¸³ ï¿½ê²¢ï¿½ì˜’ï¿½ë’ª åª›ì•¹ê»œ ï¿½ê¹®ï¿½ê½¦
+	//enctype="multipart/form-data" »ç¿ëÇÏ±â À§ÇÑ Å¬·¡½º °´Ã¼ »ı¼º
    @Bean
    public StandardServletMultipartResolver multipartResolver() {
-      return new StandardServletMultipartResolver(); // åª›ì•¹ê»œ ï¿½ê¹®ï¿½ê½¦ï¿½ë¸¯ï¿½ë¿¬ è«›ì„‘ì†š
+      return new StandardServletMultipartResolver(); //°´Ã¼ »ı¼ºÇÏ¿© ¹İÈ¯
    }
 
 }
